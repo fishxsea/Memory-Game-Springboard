@@ -39,7 +39,7 @@ h1 {
 }
 
 
-#start span {
+#restart span {
   padding: 0;
   margin-left: 1.5em;
 
@@ -50,7 +50,7 @@ h1 {
   cursor: pointer;
 }
 
-#start span:hover {
+#restart span:hover {
   color: rgb(181, 158, 236);
   text-shadow: 0 0 1em rgb(146, 126, 190);
 }

@@ -1,5 +1,5 @@
 const squares = document.querySelectorAll('.square')
-const restart = document.querySelector('#start')
+const restart = document.querySelector('#restart')
 const container = document.querySelector('.container')
 const score = document.querySelector('.score')
 
