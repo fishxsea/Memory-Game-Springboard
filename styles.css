@@ -61,6 +61,7 @@ h1 {
   font-size: 120px;
   margin-left: 1.5em;
   user-select: none;
+  text-shadow: 0 0 1em rgb(146, 126, 190)
 }
 
 
