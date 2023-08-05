@@ -1,7 +1,6 @@
 const squares = document.querySelectorAll('.square')
-const start = document.querySelector('#start')
+const restart = document.querySelector('#start')
 const container = document.querySelector('.container')
-const restart = document.querySelector('#restart')
 const score = document.querySelector('.score')
 
 let foundPairs = 0; // End game on 8
@@ -19,42 +18,42 @@ function shuffleCells(array) {
   }
 }
 
-start.addEventListener('click', () => {
+restart.addEventListener('click', () => {
   location.reload(true)
 })
 
 shuffleCells(colors)
-  squares.forEach(function(cell, index){
-    cell.addEventListener('click', () => {
-      cell.style.setProperty('--color', colors[index])
-      cell.classList.toggle('disabled');
-      cell.classList.toggle('active');
-      activeCards.push(cell);
-      activeColors.push(cell.style.cssText)
-      clicks++
-      score.innerText = clicks
-      if (activeColors[0] === activeColors[1]) {
-        activeColors = [];
-        activeCards = [];
-        foundPairs++
-      }
+squares.forEach(function(cell, index){
+  cell.addEventListener('click', () => {
+    cell.style.setProperty('--color', colors[index])
+    cell.classList.toggle('disabled');
+    cell.classList.toggle('active');
+    activeCards.push(cell);
+    activeColors.push(cell.style.cssText)
+    clicks++
+    score.innerText = clicks
+    if (activeColors[0] === activeColors[1]) {
+      activeColors = [];
+      activeCards = [];
+      foundPairs++
+    }
 
-      if (foundPairs === 8) {
-        score.style.color = 'white'
-      }
-      
-      if (activeCards.length === 2 && activeColors[0] !== activeColors[1]) {
-        container.classList.add('unclickable');
-        setTimeout(function() {
-          container.classList.remove('unclickable');
-          activeCards[0].classList.remove('active');
-          activeCards[1].classList.remove('active');
-          activeCards[0].classList.remove('disabled');
-          activeCards[1].classList.remove('disabled');
-          activeCards = [];
-          activeColors = [];
-        }, 1000)
-      }
+    if (foundPairs === 8) {
+      score.style.color = 'white'
+    }
+    
+    if (activeCards.length === 2 && activeColors[0] !== activeColors[1]) {
+      container.classList.add('unclickable');
+      setTimeout(function() {
+        container.classList.remove('unclickable');
+        activeCards[0].classList.remove('active');
+        activeCards[1].classList.remove('active');
+        activeCards[0].classList.remove('disabled');
+        activeCards[1].classList.remove('disabled');
+        activeCards = [];
+        activeColors = [];
+      }, 1000)
+    }
     })
     cell.removeEventListener('click', () => {})
   })
