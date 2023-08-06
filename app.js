@@ -8,7 +8,8 @@ let activeCards = []; // Tracks actively clicked cards
 let activeColors = [];
 let clicks = 0
 
-const colors = ['#7400f9', '#00b2f9', '#4f00a8', '#671fb9', '#05789b', '#2e0085', '#00f9cf', '#f900f9', '#7400f9', '#00b2f9', '#4f00a8', '#671fb9', '#05789b', '#2e0085', '#00f9cf', '#f900f9']
+
+const colors = ['#3200a8', '#00b2f9', '#b25bcc', '#7700ff', '#05789b', '#2e0085', '#00f9cf', '#f900f9', '#3200a8', '#00b2f9', '#b25bcc', '#7700ff', '#05789b', '#2e0085', '#00f9cf', '#f900f9']
 
 // Shuffle array for random color assignment
 function shuffleCells(array) {
