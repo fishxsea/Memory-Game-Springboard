@@ -2,6 +2,7 @@ const squares = document.querySelectorAll('.square')
 const restart = document.querySelector('#restart')
 const container = document.querySelector('#container')
 const score = document.querySelector('.score')
+const grid = document.querySelector('.grid-container')
 
 let foundPairs = 0; // End game on 8
 let activeCards = []; // Tracks actively clicked cards
@@ -9,7 +10,7 @@ let activeColors = [];
 let clicks = 0
 
 
-const colors = ['#3200a8', '#00b2f9', '#b25bcc', '#7700ff', '#05789b', '#2e0085', '#00f9cf', '#f900f9', '#3200a8', '#00b2f9', '#b25bcc', '#7700ff', '#05789b', '#2e0085', '#00f9cf', '#f900f9']
+const colors = ['#8c00ff', '#33005e', '#00c3ff', '#7fe1ff', '#ff00bf', '#ff67d9', '#ffee00', '#fff9a5', '#8c00ff', '#33005e', '#00c3ff', '#7fe1ff', '#ff00bf', '#ff67d9', '#ffee00', '#fff9a5']
 
 // Shuffle array for random color assignment
 function shuffleCells(array) {
@@ -32,6 +33,7 @@ squares.forEach(function(cell, index){
     activeCards.push(cell);
     activeColors.push(cell.style.cssText)
     clicks++
+    
     score.innerText = clicks
     if (activeColors[0] === activeColors[1]) {
       activeColors = [];
@@ -41,6 +43,7 @@ squares.forEach(function(cell, index){
 
     if (foundPairs === 8) {
       score.style.color = 'white'
+      grid.style.backgroundColor = 'rgb(11, 1, 29)'
     }
     
     if (activeCards.length === 2 && activeColors[0] !== activeColors[1]) {
@@ -55,8 +58,9 @@ squares.forEach(function(cell, index){
         activeColors = [];
       }, 1000)
     }
+    document.body.focus()
     })
-    cell.removeEventListener('click', () => {})
+    
   })
 
 
