@@ -1,6 +1,7 @@
 body {
   display: flex;
   justify-content: center;
+  align-items: center;
   background-color: #12073a;
   height: 100vh;
   font-family: 'Montserrat Subrayada', sans-serif;
@@ -8,26 +9,31 @@ body {
 
 #container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-evenly;
+  flex-direction: row;
+  align-items: center;
+  border: 4px solid black;
+  padding: 100px;
+  border-radius: 2%;
 }
 
 .top {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
+
 }
 
 .res-score {
   display: flex;
   justify-content: center;
   align-items: center;
-  justify-content: space-between;
 }
 
 #title {
   text-decoration: underline;
-  color: rgb(82, 53, 150);
+  color: rgb(181, 158, 236);
   font-size: 2rem;
   user-select: none;
   text-shadow: 0 0 .1em rgb(0, 0, 0);
@@ -57,13 +63,12 @@ body {
 
 .grid-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   padding: 10px;
+  margin: 2em;
   border-radius: 8px;
   border: 3px solid rgb(11, 1, 29);
-  width: 100%;
-  height: 50%;
   transition: 1000ms;
 }
 
