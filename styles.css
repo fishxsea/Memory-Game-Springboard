@@ -2,7 +2,6 @@ body {
 
   background-image: linear-gradient(#12073a, #000000);
   height: 100vh;
-  position: relative;
   font-family: 'Montserrat Subrayada', sans-serif;
 }
 
@@ -20,9 +19,9 @@ body {
 
 .res-score {
   display: flex;
+  justify-content: center;
+  align-items: center;
   justify-content: space-between;
-  flex-direction: column;
-
 }
 
 #title {
@@ -40,6 +39,7 @@ body {
   font-size: 30px;
   user-select: none;
   transition: 300ms;
+  margin: 1em;
   cursor: pointer;
 }
 
@@ -113,7 +113,6 @@ body {
 }
 
 .square:hover {
-  /* background-color: #ff7300; */
   transform: rotate(45deg);
   border-color: white;
 
